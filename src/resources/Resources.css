@@ -1,0 +1,88 @@
+.resources-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    background-color: var(--caloryCard);
+    z-index: -10;
+}
+
+.resources-container>:nth-child(1) {
+    display: flex;
+}
+
+.resources-container>div > a {
+    background-color: var(--orange);
+    width: fit-content;
+    color: white;
+    gap: 2px;
+    font-size: 14px;
+    padding: 3px 6px;
+    border-radius: 3px;
+    text-decoration: none;
+    margin-left: 1rem;
+  }
+
+  .resources-container>div > a:hover {
+    text-decoration: underline;
+  }
+
+.invalid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.invalid-blur-1, .invalid-blur-2 {
+    width: 29rem;
+    height: 10rem;
+    top: 0rem;
+    background: rgba(253, 120, 43, 0.69);
+    position: absolute;
+    filter: blur(100px);
+}
+.invalid-blur-1 {
+    left: 65%;
+}
+.invalid-blur-2 {
+    right: 65%;
+}
+
+.invalid>:nth-child(1) {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 3rem;
+    z-index: 2;
+}
+.invalid>:nth-child(2)
+{
+    font-size: 1.5rem;
+}
+.invalid>:nth-child(3) {
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.invalid>:nth-child(4) {
+    text-transform: none;
+    text-align: justify;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    line-height: 40px;
+    z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+    .invalid {
+        display: block;
+    }
+    .invalid-blur-1 {
+        display: block;
+    }
+    .invalid-blur-2 {
+        display: block;
+    }
+}

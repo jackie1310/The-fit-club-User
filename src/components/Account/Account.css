@@ -1,0 +1,151 @@
+.account-container {
+    background-color: var(--appColor);
+    min-height: 100vh;
+    max-height: fit-content;
+    margin-top: 0px;
+}
+
+.account {
+    display: flex;
+    padding-top: 4rem;
+    max-width: 70rem; /* max-w-4xl equivalent */
+    margin: 0 auto;
+    gap: 1.75rem; /* gap-7 equivalent */
+    margin-bottom: 6rem; /* mb-24 equivalent */
+}
+
+.account-blur {
+    width: 29rem;
+    height: 10rem;
+    left: -20%;
+    top: 20rem;
+    background: rgba(253, 120, 43, 0.69);
+    position: absolute;
+    filter: blur(150px);
+}
+
+.left-column > a {
+    background-color: var(--orange);
+    width: fit-content;
+    color: white;
+    gap: 2px;
+    font-size: 14px;
+    padding: 3px 6px;
+    border-radius: 3px;
+    text-decoration: none;
+    margin-left: 1rem;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+  }
+
+  .left-column > a:hover {
+    text-decoration: underline;
+  }
+
+.right-column {
+    margin: 0 1rem;
+    width: 70%;
+}
+
+.left-column {
+    width: 30%;
+    z-index: 2;
+}
+
+.left-column > form >input {
+    background-color: white;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    outline: none;
+    width: 300px;
+}
+
+.left-column > form >label {
+    color: white;
+}
+
+.left-column > form >button {
+    background-color: var(--orange);
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.table-user {
+    width: 100%;
+    background: var(--lightgray);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+.table-user>:nth-child(1)> {
+    text-align: left;
+    padding: 15px;
+}
+
+.table-user>:nth-child(1)>:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  color: var(--orange);
+}
+
+.table-user>:nth-child(1)>:nth-child(2)>button {
+  background-color: var(--orange);
+  color: white;
+  border: none; 
+  border-radius: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .account {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .left-column {
+    width: 100%;
+  }
+  .right-column {
+    width: 100%;
+  }
+  .left-column > form >input {
+    width: 250px;
+    margin: 10px auto;
+  }
+  .left-column >form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .table-user{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 280px;
+    border-radius: 0px;
+  }
+  .right-column {
+    margin: 0px;
+  }
+  .account-container {
+    max-width: 300px;
+    overflow: hidden;
+  }
+}

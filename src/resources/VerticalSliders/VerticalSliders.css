@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.resource {
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.left-slide {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  left: 0;
+  background-color: var(--orange);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 410px 0;
+  padding: 10px;
+}
+
+.left-slide>h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
+.left-slide>form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.left-slide>form>input {
+  background: var(--caloryCard);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 200px;
+  margin: auto;
+}
+
+.left-slide>form>button {
+  background-color: var(--lightgray);
+  color: var(--caloryCard);
+  margin: auto;
+  width: 300px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+.right-slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.right-slide>h1 {
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+}
+
+.right-slide>button {
+  background-color: var(--orange);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  width: 300px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.resource-btn:hover {
+  color: #222;
+}
+
+.resource-btn:focus {
+  outline: none;
+}
+
+.dots {
+  color: white;
+}
+.text {
+  max-width: 700px;
+  margin: 0 auto;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .resource {
+    display: flex;
+    flex-direction: column;
+  }
+   .left-slide {
+    position: relative;
+    width: 95%;
+    border-radius: 0;
+   } 
+   .right-slide {
+    position: relative;
+    width: 100%;
+    left: 0;
+   }
+   .left-slide>form>button {
+    width: 200px;
+   }
+   .left-slide>form>input {
+    width: 220px;
+   }
+   .left-slide>h1 {
+    font-size: 30px;
+   }
+}
