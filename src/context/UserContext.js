@@ -14,7 +14,7 @@ export function UserContextProvider({children}) {
         if (ls && ls?.getItem("user")) {
             const data = JSON.parse(ls.getItem('user'));
             const id = data._id;
-            axios.get(`http://localhost:8080/users/${id}`).then(response => {
+            axios.get(`https://the-fit-club-backend.onrender.com/users/${id}`).then(response => {
                 if (response.status === 202) {
                     setUserInfo();
                 }
@@ -25,7 +25,7 @@ export function UserContextProvider({children}) {
         }
     }, [ls]);
     useEffect(() => {
-        axios.get("http://localhost:8080/data/vid").then(response => setVideos(response.data));
+        axios.get("https://the-fit-club-backend.onrender.com/data/vid").then(response => setVideos(response.data));
     }, []);
     return (
         <UserContext.Provider value={{userInfo, setUserInfo, videos}}>

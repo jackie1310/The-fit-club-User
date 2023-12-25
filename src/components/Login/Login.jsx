@@ -18,7 +18,7 @@ export default function Login () {
         /* Khi người dùng đăng ký tài khoản mới, thông tin đăng ký sẽ được xử lý ở đây bằng cách 
         đưa về BackEnd nếu username đã có trong mongo database, backend sẽ truyền json file chứa thông tin người dùng */
         const data = {name, email, password};
-        await axios.post("http://localhost:8080/users/signup", data).then(async response => {
+        await axios.post("https://the-fit-club-backend.onrender.com/users/signup", data).then(async response => {
             if (response.status === 200) {
                 ls?.setItem('user', JSON.stringify(response.data));
                 toast.success("Account created!", {
@@ -57,7 +57,7 @@ export default function Login () {
         nếu đúng username và password, backend sẽ truyền json file chứa thông tin người dùng */
         const data = {email, password};
         
-        await axios.post("http://localhost:8080/users/login", data).then(response => {
+        await axios.post("https://the-fit-club-backend.onrender.com/users/login", data).then(response => {
             if (response.status === 200) {
                 ls?.setItem('user', JSON.stringify(response.data))
                 toast.success("Welcome back!", {

@@ -25,7 +25,7 @@ export default function Videos () {
         const user_id = userInfo?._id;
         const _id = data._id;
         const user = {user_id, _id}
-        await axios.post('http://localhost:8080/videos/post', user)
+        await axios.post('https://the-fit-club-backend.onrender.com/videos/post', user)
     }
     const handleChange = (term) => {
         setSearchTerm(term);
@@ -41,7 +41,7 @@ export default function Videos () {
             <div className="videos">
                 {filteredData.map((video, index) => (
                     <div className="table-video" key={index}>
-                        <ReactPlayer url={video.link} height="120px" width="280px"/>
+                        <ReactPlayer controls url={video.link} height="120px" width="280px"/>
                         <p
                             onMouseEnter={() => setHovered(index)}
                             onMouseLeave={() => setHovered(-1)}

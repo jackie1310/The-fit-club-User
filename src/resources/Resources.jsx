@@ -6,11 +6,9 @@ import { UserContext } from "../context/UserContext";
 
 export default function Resources() {
     const {userInfo} = useContext(UserContext);
-    const [number, setNumber] = useState(0);
+    const [valid, setValid] = useState(false);
     useEffect(() => {
-        if (userInfo?.basic) setNumber(3);
-        else if (userInfo?.premium) setNumber(5);
-        else if (userInfo?.pro) setNumber(10);
+        if (userInfo?.basic || userInfo?.premium || userInfo?.pro) setValid(true);
     }, [userInfo]);
     return (
         <div className="resources-container">
@@ -22,8 +20,8 @@ export default function Resources() {
                     </svg>
                     Home
                 </a>
-                {(typeof userInfo === "object" && number > 0 )
-                    ? <Videos number={number}/> 
+                {(typeof userInfo === "object" && valid )
+                    ? <Videos/> 
                     : <div className="invalid">
                             <span>Sign in</span>
                             <span>and</span>

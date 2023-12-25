@@ -12,7 +12,7 @@ export default function Plans() {
         const user = userInfo.email;
         const id = plan.id;
         const data = {prod_name,user, id}
-        const response = await axios.post("http://localhost:8080/checkout", data);
+        const response = await axios.post("https://the-fit-club-backend.onrender.com/checkout", data);
         if (response.data.url) {
             window.location = response.data.url;
         }

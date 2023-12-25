@@ -3,6 +3,7 @@
     min-height: 100vh;
     max-height: fit-content;
     margin-top: 0px;
+    position: relative;
 }
 
 .account {
@@ -46,11 +47,16 @@
 .right-column {
     margin: 0 1rem;
     width: 70%;
+    z-index: 5;
+}
+
+.right-column > p {
+  color: white;
 }
 
 .left-column {
     width: 30%;
-    z-index: 2;
+    z-index: 5;
 }
 
 .left-column > form >input {
@@ -78,7 +84,7 @@
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-top: 10px;
+    margin: 10px auto;
     cursor: pointer;
 }
 
@@ -111,6 +117,50 @@
   border-radius: 10px;
 }
 
+.cancel-bg {
+  background-color: black;
+  opacity: 0.7;
+  width: 100vw;
+  height: 200vh;
+  z-index: 10;
+  position: fixed;
+}
+
+.cancel {
+  text-align: center;
+  background-color: var(--lightgray);
+  width: 380px;
+  height: 150px;
+  padding: 8px 18px;
+  position: fixed;
+  top: 30%;
+  left: 35%;
+  z-index: 20;
+  border-radius: 10px;
+}
+
+.cancel>:nth-child(2) {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+.cancel>:nth-child(2)>button {
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: relative;
+  border: none;
+  box-shadow: 10px;
+}
+.cancel>:nth-child(2)>button:nth-child(1) {
+  background-color: var(--darkgrey);
+  color: white;
+}
+.cancel>:nth-child(2)>button:nth-child(1) {
+  background-color: var(--orange);
+  color: white;
+}
 
 @media screen and (max-width: 768px) {
   .account {
@@ -147,5 +197,11 @@
   .account-container {
     max-width: 300px;
     overflow: hidden;
+  }
+  .cancel {
+    width: 250px;
+    height: 150px;
+    top: 10%;
+    left: 2%;
   }
 }

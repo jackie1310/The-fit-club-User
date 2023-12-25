@@ -77,7 +77,7 @@ function SetNew({code, setSent}) {
                 progress: undefined,
             });
             const data = {email, newPassword};
-            await axios.post("http://localhost:8080/users/change", data).then(response => {
+            await axios.post("https://the-fit-club-backend.onrender.com/users/change", data).then(response => {
                 if (response.status === 200) {
                     window.location = '/';
                 }
